@@ -1,0 +1,623 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.contanier{
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.contanier::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-color: rgb(32, 220, 192);
+}
+.contanier .hero{
+    position: relative;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #e2137e;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 0 40px 0 80px;
+}
+.hero nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+}
+
+
+.hero nav .logo{
+    color: #801f82;
+    font-size: 45px;
+    font-weight: bold;
+}
+.hero nav .nav-links a {
+    color: #242424;
+    margin-left: 40px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.hero nav .nav-links a:hover,
+.hero nav .nav-links a.active{
+    color: #801f82;
+}
+.hero .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+.hero .content .div-text{
+    width: 40%;
+}
+
+.hero .content .div-text h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #fff;
+}
+.hero .content .div-text h3{
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #fff;
+}
+.hero .content .div-text h4{
+    color: #801f82;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.hero .content .div-text p{
+    color: #4f4f4f;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.hero .content .div-text .btn{
+    padding: 15px 20px;
+    background-color: #801f82;
+    border: 2px solid #801f82;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.hero .content .div-text .btn:hover{
+    color: #801f82;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+.soc-link{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.soc-link a i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #801f82;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+.soc-link a i:hover{
+    color: #ff9dcf;
+}
+
+.hero .content .div-img{
+    
+       
+       width: 40%;
+}
+.hero .content .div-img img{
+    width: 100%;
+}
+/* animation */
+
+.hero .logo,
+.hero .content .div-text h1,
+.hero .content .div-text h3,
+.hero .content .div-text h4,
+.hero .content .div-text .btn{
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+.hero .logo{
+    animation-delay: 0.2s;
+}
+.hero .content .div-text h1{
+    animation-delay: 0.5s;
+}
+
+.hero .content .div-text h3{
+    animation-delay: 0.5s;
+}
+.hero .content .div-text h4{
+    animation-delay: 0.9s;
+}
+
+
+.hero .content .div-btn{
+    animation-delay: 1.3s;
+}
+@keyframes slide-top{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.hero .content .div-text p{
+    position: relative;
+    left: 100px;
+    animation: slide-right .5s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+@keyframes slide-right{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.hero .content .div-img img{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+    border-radius: 50%;
+}
+
+@keyframes fade-img{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero .div-banner{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+    border-radius: 50%;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -50px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #aim{
+    top: 20px;
+    background-color: #04AA6D;
+  }
+  
+  #fam {
+    top: 80px;
+    background-color: #2196F3;
+  }
+  
+  #edu{
+    top: 140px;
+    background-color: #f44336;
+  }
+  
+  #oth {
+    top: 200px;
+    background-color: #555
+  }
+
+  *****sklis*****
+
+  * {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  color: rgb(11, 10, 10);
+  
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #1c0edd;}
+.fs  {width: 80%; background-color: #6b5252;}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+ ------contact--------------
+
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+/* Header styles */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	height: 4rem;
+}
+
+.logo {
+	font-size: 2rem;
+}
+
+nav {
+	width: 30rem;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li a {
+	font-size: 1.2rem;
+	padding: 1rem;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover {
+	background-color: #0dac30;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.reachUs-button {
+	padding: 1rem;
+	background-color: #0dac30;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.reachUs-button:hover{
+	background-color: #1ac840;
+}
+
+/* banner section styles */
+.banner {
+	text-align: center;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+
+.banner img {
+	max-width: 100%;
+	height: auto;
+}
+/* Contact form styles */
+.contact-form {
+	padding: 40px 0;
+	margin: 0 10px;
+    al
+}
+
+.form-container {
+	max-width: 40%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display:block;
+	font-weight: bold;
+}
+.form-container input, textarea{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	resize: vertical;
+}
+.submit-button {
+	padding: 10px 20px;
+	background-color: #0dac30;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+/* Header styles */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #f592f7;
+	color: white;
+	height: 4rem;
+}
+
+.logo {
+	font-size: 2rem;
+    align-items: center;
+    
+}
+
+nav {
+	width: 8rem;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li a {
+	font-size: 1.2rem;
+	padding: 1rem;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover {
+	background-color: #0dac30;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.reachUs-button {
+	padding: 1rem;
+	background-color: #0dac30;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.reachUs-button:hover{
+	background-color: #1ac840;
+}
+
+
+/* Contact form styles */
+.contact-form {
+	padding: 40px 0;
+	margin: 0 10px;
+}
+
+.form-container {
+	max-width: 40%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display:block;
+	font-weight: bold;
+}
+.form-container input, textarea{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	resize: vertical;
+}
+.submit-button {
+	padding: 10px 20px;
+	background-color: #0dac30;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+/* Contact info styles */
+.contact-info {
+	text-align: center;
+	padding: 50px 0;
+	background-color: #f7f7f7;
+}
+
+.contact-info h2 {
+	margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+	padding: 20px;
+	text-align: center;
+	background-color: #333;
+	color: white;
+}
+/* Hamburger styles */
+.hamburger {
+	display: none;
+	color: rgb(0, 0, 0);
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+	.logo {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	#nav-menu {
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		background-color: #333;
+		width: 100%;
+		display: none;
+	}
+
+	#nav-menu.active {
+		display: block;
+		flex-direction: row;
+		padding: 1rem;
+	}
+}
